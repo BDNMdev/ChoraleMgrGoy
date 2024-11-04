@@ -1,0 +1,65 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+}
+
+header .nav-link {
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header .nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Prestation Section */
+.prestation-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Card Styles */
+.prestation-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.prestation-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-text {
+    color: #777;
+    font-size: 1rem;
+}
+
+/* Footer */
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #bbb;
+}

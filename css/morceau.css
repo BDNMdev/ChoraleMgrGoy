@@ -1,0 +1,34 @@
+body {
+    background-color: #f8f9fa;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+
+.morceaux-section {
+    padding: 50px 0;
+}
+
+.morceaux-section h2 {
+    font-size: 2.5rem;
+}
+
+.morceaux-section .morceau-card {
+    transition: transform 0.2s;
+}
+
+.morceaux-section .morceau-card:hover {
+    transform: scale(1.05);
+}
+
+.audio-controls {
+    margin-top: 20px;
+}
+
+.progress {
+    height: 10px;
+}
+
+.audio-time {
+    margin-top: 5px;
+}

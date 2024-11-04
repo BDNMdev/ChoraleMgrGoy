@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liste de prestation</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/liste.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="../image/logo_upc.png"
+            alt="logo de upc"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+          />
+          Chorale Mgr Goy Bolia
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"
+                ><i class="fas fa-home"></i> Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="liste_prestation.html"
+                ><i class="fas fa-music"></i> Liste de prestation</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"
+                ><i class="fas fa-info-circle"></i> A propos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Prestation List Section -->
+    <section class="prestation-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Liste de Prestation</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <!-- Prestation Card 1 -->
+          <div class="col">
+            <a href="prestation1.html" class="text-decoration-none">
+                <div class="card prestation-card" onclick="animateCard(this)">
+                    <img src="../image/presta1.png" class="card-img-top" alt="Prestation 1"/>
+                <div class="card-body">
+                    <h5 class="card-title">Prestation 1</h5>
+                    <p class="card-text">Date: 31/10/2024</p>
+                </div>
+                </div>
+            </a>
+          </div>
+          <!-- Add more prestation cards as needed 
+          <div class="col">
+            <div class="card prestation-card" onclick="animateCard(this)">
+              <img
+                src="image/prestation2.jpg"
+                class="card-img-top"
+                alt="Prestation 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Prestation #2</h5>
+                <p class="card-text">Date: 2024-02-20</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card prestation-card" onclick="animateCard(this)">
+              <img
+                src="image/prestation3.jpg"
+                class="card-img-top"
+                alt="Prestation 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Prestation #3</h5>
+                <p class="card-text">Date: 2024-03-10</p>
+              </div>
+            </div>
+          </div> -->
+          <!-- Repeat similar blocks for each prestation item -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Bdnmdevconcept. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
