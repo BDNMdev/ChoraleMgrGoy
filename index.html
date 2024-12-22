@@ -1,58 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chorale Mgr Goy Bolia</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Dégradé de couleur */
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background-color: #155692;
+            /* Bleu foncé */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 20px 20px;
+          justify-content: space-between;
+        }
+
+        .navbar-brand {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .navbar-collapse {
+          display: flex;
+            /* Aligne les éléments verticalement sur les petits écrans */
+            /* Prend toute la largeur */
+        }
+
+
+        .navbar a {
+            color: #ffffff;
+            /* Couleur des liens en blanc */
+            transition: 0.5s;
+    
+        }
+
+        .navbar li a:hover {
+            color: #fff5cb;
+
+            /* Changement de couleur au survol */
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f0f0f0, #ecd500),url('./image/profil.png');
+            /* Rouge */
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            flex: 1;
+            /* Permet à la section hero de prendre tout l'espace disponible */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-warning {
+            background-color: #ffcc00;
+            /* Jaune */
+            color: #053bdd;
+            /* Bleu */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-warning:hover {
+            background-color: #0059ff;
+            /* Bleu */
+            color: #ffcc00;
+            /* Jaune */
+        }
+
+        .footer {
+            background-color: #000000;
+            /* Noir */
+            padding: 20px 0;
+            color: #ffcc00;
+            /* Jaune */
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            /* Centre le texte dans le footer */
+        }
+
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 204, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar-collapse {
+                width: 100%;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-item {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .btn-warning {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            /* Permet au contenu de prendre tout l'espace disponible */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            background-color: #cc0000;
+            /* Rouge */
+            flex: 1;
+            /* Permet à la section hero de prendre tout l'espace disponible */
+            display: flex;
+            justify-content: center;
+            /* Centre le contenu verticalement */
+            align-items: center;
+            /* Centre le contenu horizontalement */
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 100px 0;
+            /* Ajustez ce padding si nécessaire */
+        }
+
+
+
+        
+        .navbar-toggle {
+            display: none;
+            /* Masque le bouton de basculement par défaut */
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                display: none;
+                /* Masque le menu par défaut */
+            }
+
+            .navbar-toggle {
+                display: block;
+                /* Affiche le bouton de basculement sur les petits écrans */
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="image/logo_upc.png" alt="logo_upc" width="30" height="30" class="d-inline-block align-top">
+                Chorale Mgr Goy Bolia
+            </a>
+            <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/liste_prestation.html">Liste de prestation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/about.html">A propos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="image/logo_upc.png" alt="logo de upc" width="30" height="30" class="d-inline-block align-top">
-            Chorale Mgr Goy Bolia
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/liste_prestation.html"><i class="fas fa-music"></i> Liste de prestation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/about.html"><i class="fas fa-info-circle"></i> A propos</a>
-                </li>
-            </ul>
-        </div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Bienvenue à la Chorale Mgr Goy Bolia</h1>
+                <p class="lead">Nos prestations musicales inoubliables.</p>
+                <a href="pages/liste_prestation.html" class="btn btn-warning btn-lg mt-3">Voir nos préstations</a>
+            </div>
+        </section>
     </div>
-</nav>
 
-<!-- Hero Section -->
-<section class="hero text-center d-flex align-items-center justify-content-center text-white">
-    <div class="container">
-        <h1 class="display-4 fw-bold">Bienvenue à la Chorale Mgr Goy Bolia</h1>
-        <p class="lead">Nos prestations musicales inoubliables.</p>
-        <a href="pages/about.html" class="btn btn-warning btn-lg mt-3">En savoir plus</a>
-    </div>
-</section>
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p>&copy; 2024 Bdnmdevconcept. Tous droits réservés.</p>
+    </footer>
 
-<!-- Footer -->
-<footer class="footer bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Bdnmdevconcept. Tous droits réservés.</p>
-</footer>
-
-<!-- Bootstrap JS and dependencies -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS et dépendances supprimés -->
+    <script>
+        function toggleMenu() {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            navbarCollapse.style.display = navbarCollapse.style.display === 'flex' ? 'none' : 'flex'; // Bascule l'affichage du menu
+        }
+    </script>
 </body>
+
 </html>
