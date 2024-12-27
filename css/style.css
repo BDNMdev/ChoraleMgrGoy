@@ -51,7 +51,7 @@ a {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     flex: 1;
     /* Permet à la section hero de prendre tout l'espace disponible */
-    animation: glowing 25s ease-in-out infinite alternate;
+    animation: glowing 75s ease-in-out infinite alternate;
 }
 
 @keyframes glowing {
