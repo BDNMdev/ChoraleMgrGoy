@@ -8,7 +8,9 @@
 
 /* Hero Section Styles */
 .hero {
-    background: linear-gradient(135deg, #f0f0f0, #ecd500),url('./image/profil.png');
+    background-image: linear-gradient(135deg, #f0f0f0, #ecd500), url('image/profil.png');
+    background-size: cover;
+    background-position: center;
     height: 80vh;
     position: relative;
     background-color: #333333c4;
