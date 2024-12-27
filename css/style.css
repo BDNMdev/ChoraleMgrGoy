@@ -42,7 +42,7 @@ a {
 }
 
 .hero {
-    background: linear-gradient(135deg, #ecd400bd, #0059ffbb), url('../image/background.jpg');
+    background: linear-gradient(135deg, rgba(236, 212, 0,0.4), rgba(0, 89, 255, 0.4)), url('../image/profil.png');
     background-size: cover;
     background-position-y: 50%;
     padding: 100px 0;
