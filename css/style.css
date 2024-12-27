@@ -8,19 +8,28 @@ a {
     text-decoration: none;
 }
 
-/* Hero Section Styles */
-.hero {
-    background: url('../image/profil.png') no-repeat center center;
-    height: 80vh;
-    position: relative;
-    background-color: #333333c4;
+.navbar {
+    background-color: #0e4274;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
-.hero h1{
-    color: #5c89d6db;
+
+.navbar-brand {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
 }
-.hero p{
-    font-size: 30px;
-    font-weight: bolder;
+
+.navbar-collapse {
+    display: flex;
+}
+
+
+.navbar a {
     color: #ffffff;
     transition: 0.5s;
 
